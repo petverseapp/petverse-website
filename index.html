@@ -81,15 +81,8 @@
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient-hero);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
+            width: 300px;
+            height: 100px;
         }
 
         .nav-links {
@@ -277,8 +270,6 @@
         .phone-mockup img {
             width: 100%;
             height: auto;
-            border-radius: 30px;
-            box-shadow: 0 30px 80px rgba(45, 95, 126, 0.25);
             animation: phoneFloat 4s ease-in-out infinite;
         }
 
@@ -787,15 +778,21 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Design */
+/* Responsive Design */
         @media (max-width: 1024px) {
             .hero-container {
                 grid-template-columns: 1fr;
                 gap: 3rem;
+                padding: 0 2rem;
             }
 
             .hero h1 {
                 font-size: 3rem;
+            }
+
+            .hero-visual img {
+                max-width: 80%;
+                margin: 0 auto;
             }
 
             .features-grid {
@@ -826,19 +823,50 @@
 
         @media (max-width: 768px) {
             .nav-links {
-                gap: 1.5rem;
+                display: none;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .hero-container {
+                padding: 0 1.5rem;
+                gap: 2rem;
             }
 
             .hero h1 {
                 font-size: 2.5rem;
+                line-height: 1.1;
             }
 
             .hero-subtitle {
-                font-size: 1.15rem;
+                font-size: 1.1rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            .primary-cta,
+            .secondary-cta {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                padding: 1rem 2rem;
+            }
+
+            .hero-visual img {
+                max-width: 100%;
+                width: 100%;
             }
 
             .features-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
             .comparison-row {
@@ -852,6 +880,7 @@
 
             .trust-container {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .section-title {
@@ -866,15 +895,14 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+            </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon">🐾</div>
-                PetVerse
+                <img src="images/petverse-logo-horizontal-full.png" class="logo-icon">
             </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
@@ -885,7 +913,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+<!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -909,7 +937,7 @@
             </div>
             <div class="hero-visual">
                 <div class="phone-mockup">
-                    <img src="https://via.placeholder.com/500x1000/4A8FB0/ffffff?text=PetVerse+App+Screenshot" alt="PetVerse App Interface">
+                    <img src="images/hero_img_new.png" alt="PetVerse App Interface" style="width: 800px; max-width: none;">
                 </div>
             </div>
         </div>
@@ -937,70 +965,70 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+<!-- Features Section -->
     <section class="features" id="features">
         <div class="features-container">
             <div class="section-header">
                 <span class="section-badge">Why PetVerse</span>
                 <h2 class="section-title">Built for Early Detection,<br>Not Diagnosis</h2>
                 <p class="section-subtitle">
-                    Veterinary-backed AI that learns your pet's unique health patterns and alerts you to potential risks.
+                    On-device AI that learns your pet's unique health patterns while keeping data 100% private.
                 </p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🧠</div>
-                    <h3 class="feature-title">Privacy-First AI</h3>
+                    <h3 class="feature-title">On-Device Machine Learning</h3>
                     <p class="feature-description">
-                        TensorFlow Lite runs 100% on your device. Your pet's health data never leaves your phone—no cloud uploads, no tracking, no compromises.
+                        TensorFlow Lite runs 100% on your device with breed-specific risk analysis. Your pet's health data never leaves your phone—no cloud uploads, no tracking, no compromises.
                     </p>
-                    <span class="feature-highlight">< 50ms prediction speed</span>
+                    <span class="feature-highlight">< 50ms predictions</span>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">Breed Intelligence</h3>
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">AI Health Assistant</h3>
                     <p class="feature-description">
-                        Breed-specific risk multipliers backed by AKC and WSAVA research. Brachycephalic breeds get respiratory monitoring, large dogs get joint tracking.
+                        Chat with an AI trained on your pet's health data. Get personalized insights, ask questions about symptoms, and receive guidance based on historical patterns.
                     </p>
-                    <span class="feature-highlight">18 health categories</span>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Daily XP System</h3>
-                    <p class="feature-description">
-                        Turn pet care into habit formation. Earn XP for logging metrics, unlock levels, and maintain daily streaks. Health tracking that's actually engaging.
-                    </p>
-                    <span class="feature-highlight">2x first log bonus</span>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3 class="feature-title">Multi-User Sharing</h3>
-                    <p class="feature-description">
-                        Share your pet's profile with family, pet sitters, or vets. 34 granular permissions let you control exactly what each person can see and edit.
-                    </p>
-                    <span class="feature-highlight">Up to 5 collaborators</span>
+                    <span class="feature-highlight">Context-aware responses</span>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Self-Learning Model</h3>
+                    <h3 class="feature-title">Comprehensive Health Tracking</h3>
                     <p class="feature-description">
-                        The more you log, the smarter it gets. ML tuning improves predictions over time, personalized to your pet's unique health baseline.
+                        Log 18+ health categories: water intake, eating habits, mobility, temperature, weight, grooming, waste, behavior, and more. Everything in one place.
                     </p>
-                    <span class="feature-highlight">75+ logs for optimal accuracy</span>
+                    <span class="feature-highlight">18+ health metrics</span>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">✈️</div>
-                    <h3 class="feature-title">Works Offline</h3>
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Gamified Daily Routines</h3>
                     <p class="feature-description">
-                        Full functionality without internet. Log metrics, get predictions, track trends—all locally. Premium users can sync across devices.
+                        Turn pet care into habit formation. Create custom routines, earn XP for logging metrics, unlock levels, and maintain daily streaks. Health tracking that's actually engaging.
                     </p>
-                    <span class="feature-highlight">Zero downtime</span>
+                    <span class="feature-highlight">Custom routines + XP rewards</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3 class="feature-title">Integrated Calendar</h3>
+                    <p class="feature-description">
+                        Appointments, medications, and routine reminders all in one place. Timeline view shows your pet's daily schedule with smart notifications.
+                    </p>
+                    <span class="feature-highlight">Never miss a dose</span>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3 class="feature-title">Export Health Reports</h3>
+                    <p class="feature-description">
+                        Generate PDF or CSV reports for vet visits. Share comprehensive health data with one tap—complete with trends, predictions, and historical logs.
+                    </p>
+                    <span class="feature-highlight">PDF & CSV formats</span>
                 </div>
             </div>
         </div>
