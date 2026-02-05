@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Legal - PetVerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500;600;700&family=Cabinet+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cabinet Grotesk', -apple-system, sans-serif;
+            color: #1A2332;
+            line-height: 1.8;
+            background: #FAFAFA;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #5A6C7D;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-nav {
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-nav a {
+            color: #5A6C7D;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-nav a:hover,
+        .sidebar-nav a.active {
+            background: #F4E8D8;
+            color: #2D5F7E;
+        }
+
+        .main-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #E8E8E8;
+        }
+
+        h1 {
+            font-family: 'Clash Display', -apple-system, sans-serif;
+            font-size: 3rem;
+            color: #2D5F7E;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            color: #5A6C7D;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-family: 'Clash Display', -apple-system, sans-serif;
+            font-size: 1.75rem;
+            color: #2D5F7E;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid #E8E8E8;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        h3 {
+            font-family: 'Clash Display', -apple-system, sans-serif;
+            font-size: 1.25rem;
+            color: #2D5F7E;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h4 {
+            font-family: 'Cabinet Grotesk', sans-serif;
+            font-size: 1.1rem;
+            color: #2D5F7E;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: #2D5F7E;
+            font-weight: 600;
+        }
+
+        .highlight {
+            background: #FFE5D9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #FF6B6B;
+            margin: 2rem 0;
+        }
+
+        .warning {
+            background: #FFF3CD;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #FFC107;
+            margin: 2rem 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #2D5F7E;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            scroll-margin-top: 2rem;
+        }
+
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .main-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Quick Navigation</h3>
+            <ul class="sidebar-nav">
+                <li><a href="#terms">Terms & Conditions</a></li>
+                <li><a href="#disclaimer">Disclaimer & Liability</a></li>
+                <li><a href="#eula">End-User License</a></li>
+                <li><a href="#refund">Refund Policy</a></li>
+                <li><a href="#cookies">Cookies Policy</a></li>
+                <li><a href="privacy-policy.html" style="margin-top: 1rem; background: rgba(45, 95, 126, 0.1); color: #2D5F7E; font-weight: 600;">Privacy Policy →</a></li>
+                <li><a href="index.html">← Back to Home</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <h1>Terms & Legal Information</h1>
+                <p class="last-updated">Last Updated: May 20, 2025</p>
+                <p style="color: #5A6C7D; margin-top: 1rem;">Governed by the laws of Ontario, Canada</p>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ Medical Disclaimer:</strong> PetVerse is NOT a substitute for professional veterinary care. The app provides health tracking and risk awareness tools only. Always consult a licensed veterinarian for medical decisions.
+            </div>
+
+            <p>By downloading or using PetVerse ("the App"), you agree to all terms and policies contained in this document. These policies use standard legal language suitable for app stores. For clarity, "we," "us," and "our" refer to the PetVerse app developer, and "you" or "user" refers to the person using the App.</p>
+
+            <p>If you have any questions or concerns, contact us at <strong>cozycatapp@gmail.com</strong> (please include "PetVerse Legal Question" in your subject line).</p>
+
+            <!-- TERMS AND CONDITIONS -->
+            <section id="terms" class="section">
+                <h2>Terms and Conditions</h2>
+                
+                <p>These Terms and Conditions ("Terms") govern your access to and use of the PetVerse mobile application. By using PetVerse, you agree to be bound by these Terms. If you do not agree, you must not use the App.</p>
+
+                <h3>Eligibility</h3>
+                <p>You must be at least 13 years old to use PetVerse. If you are under the age of majority (18 in most regions), you may use the App only with the involvement and consent of a parent or guardian.</p>
+
+                <h3>Account Requirement</h3>
+                <p>To access any PetVerse feature you must create a user account with a valid email address and display name. We have the right to disable or terminate usage for any users who do not meet these criteria.</p>
+
+                <h3>User Obligations and Acceptable Use</h3>
+                <p>You agree to use PetVerse only for lawful and appropriate purposes. By using PetVerse, you agree NOT to:</p>
+                <ul>
+                    <li>Violate any applicable laws or regulations while using the App</li>
+                    <li>Attempt to misuse the AI chat feature to generate content that is illegal, harmful, threatening, abusive, hateful, or infringing on any third party's rights</li>
+                    <li>Input personal data of others into the AI or the App without consent</li>
+                    <li>Use the App in a way that could harm, disable, overburden, or impair our systems or networks</li>
+                    <li>Reverse engineer, decompile, or disassemble the PetVerse app, or attempt to derive the source code</li>
+                    <li>Copy, reproduce, distribute, or create derivative works from any part of the App without our explicit written permission</li>
+                    <li>Use automated means (bots, scrapers) to access the App or collect data</li>
+                    <li>Share your account credentials or allow unauthorized access to your account</li>
+                </ul>
+
+                <h3>Intellectual Property</h3>
+                <p><strong>Our Property:</strong> PetVerse owns all rights, title, and interest in and to the App, including:</p>
+                <ul>
+                    <li>App source code, design, and user interface</li>
+                    <li>Machine learning models and algorithms</li>
+                    <li>Trademarks, logos, and branding</li>
+                    <li>Breed risk data and health category mappings</li>
+                    <li>All content, features, and functionality</li>
+                </ul>
+
+                <p><strong>Your Content:</strong> You retain ownership of content you create (pet photos, notes, health records). By using cloud sync, you grant us a limited license to store and process this content to provide the service.</p>
+
+                <h3>Termination</h3>
+                <p>These Terms are effective until terminated. You may terminate this agreement at any time by discontinuing use of PetVerse and uninstalling the App. We may terminate or suspend your access at any time with or without notice if you violate these Terms.</p>
+
+                <p>Upon termination: the rights granted to you will end immediately, you must stop using the App and delete all copies, and we will permanently remove your account and data within 30 days.</p>
+
+                <h3>Governing Law and Dispute Resolution</h3>
+                <p>This agreement shall be governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein, without regard to conflict of law principles. Any legal suits or proceedings shall be brought exclusively in the courts of Toronto, Ontario, Canada.</p>
+
+                <p>If you are a consumer residing outside of Ontario, this does not deprive you of the protection of mandatory consumer protection provisions of your country of residence.</p>
+
+                <div class="highlight">
+                    <strong>Dispute Resolution:</strong> Before pursuing legal action, please contact us at cozycatapp@gmail.com to attempt informal resolution. We are open to discussions and will try our best to address any concerns.
+                </div>
+
+                <h3>Modifications to Terms</h3>
+                <p>We reserve the right to modify these Terms at any time. When we do, we will update the "Last updated" date and make the new Terms available within the App. Your continued use after changes constitutes acceptance of the updated Terms.</p>
+
+                <h3>Entire Agreement</h3>
+                <p>These Terms (along with our Privacy Policy and other policies incorporated by reference) constitute the entire agreement between you and us regarding PetVerse.</p>
+            </section>
+
+            <!-- DISCLAIMER AND LIABILITY WAIVER -->
+            <section id="disclaimer" class="section">
+                <h2>Disclaimer and Liability Waiver</h2>
+
+                <div class="warning">
+                    <strong>⚠️ Read Carefully:</strong> This section limits our obligations and clarifies the risks you assume by using PetVerse.
+                </div>
+
+                <h3>General Informational Purpose</h3>
+                <p>PetVerse is designed for <strong>entertainment and general informational purposes only</strong>. Any advice, suggestions, or information you receive from the App's AI is not guaranteed to be correct or authoritative.</p>
+
+                <h3>Not a Substitute for Professional Advice</h3>
+                <p>PetVerse is <strong>not a substitute for professional veterinary care</strong>. Always seek the advice of a qualified veterinarian for questions or issues related to your pet's health. You acknowledge that any reliance on information provided by PetVerse is at your own discretion and risk.</p>
+
+                <h3>AI Limitations</h3>
+                <p>The PetVerse app uses artificial intelligence (via OpenAI) to generate conversational responses. AI technology has known limitations:</p>
+                <ul>
+                    <li>The AI might produce inaccurate or nonsensical responses, even if they appear confident</li>
+                    <li>The AI might lack context for your specific situation</li>
+                    <li>The AI might inadvertently produce content that is biased, sensitive, or inappropriate</li>
+                    <li>The AI's responses are not guaranteed to be unique and may resemble existing content</li>
+                </ul>
+
+                <p><strong>By using PetVerse, you accept these AI limitations.</strong> You agree that you will not hold us responsible for any harm, loss, or damage that may result from inaccurate, inappropriate, or misinterpreted AI responses.</p>
+
+                <h3>No Warranty</h3>
+                <p>The App is provided "AS IS" without warranties of any kind. We do NOT guarantee:</p>
+                <ul>
+                    <li>Accuracy of health predictions or AI responses</li>
+                    <li>Uninterrupted or error-free service</li>
+                    <li>Compatibility with all devices</li>
+                    <li>That the App will meet your specific requirements</li>
+                </ul>
+
+                <h3>Limitation of Liability</h3>
+                <p>Under no circumstances shall PetVerse's developers be liable for any indirect, incidental, special, consequential or punitive damages arising from your use of the App. This includes damages for personal injury, loss of profits, loss of data, or other intangible losses.</p>
+
+                <p><strong>Liability Cap:</strong> To the maximum extent permitted by law, our total liability to you will not exceed the amount you paid us in the past six (6) months, or CAD $50.00 if you have not had any payment obligations, whichever is greater.</p>
+
+                <h3>Indemnification</h3>
+                <p>You agree to indemnify, defend, and hold harmless PetVerse developers from all claims, liabilities, damages, and expenses (including attorneys' fees) that arise from:</p>
+                <ul>
+                    <li>Your use or misuse of the App</li>
+                    <li>Your violation of these Terms or applicable laws</li>
+                    <li>Your violation of any third party rights</li>
+                </ul>
+
+                <div class="highlight">
+                    <strong>Important:</strong> If you or your pet are experiencing a crisis or emergency, do not rely on PetVerse. Contact emergency veterinary services or a qualified professional immediately.
+                </div>
+            </section>
+
+            <!-- END-USER LICENSE AGREEMENT -->
+            <section id="eula" class="section">
+                <h2>End-User License Agreement (EULA)</h2>
+
+                <h3>License Grant</h3>
+                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+                <ul>
+                    <li>Download and install the PetVerse app on devices you own or control</li>
+                    <li>Use the App for your personal, non-commercial purposes</li>
+                </ul>
+
+                <h3>License Restrictions</h3>
+                <p>You may NOT:</p>
+                <ul>
+                    <li>Modify, adapt, translate, or create derivative works of the App</li>
+                    <li>Reverse engineer, decompile, or disassemble the App</li>
+                    <li>Remove, alter, or obscure any proprietary notices</li>
+                    <li>Use the App for any commercial purpose without written permission</li>
+                    <li>Rent, lease, lend, sell, or sublicense the App</li>
+                    <li>Transfer the App to any third party</li>
+                </ul>
+
+                <h3>Updates and Modifications</h3>
+                <p>We may provide updates, patches, or modifications to the App. You understand that we have no obligation to provide updates and may discontinue the App at any time.</p>
+
+                <h3>Third-Party Services</h3>
+                <p>The App integrates with third-party services (OpenAI, Firebase, Google Play). Your use of these services is subject to their respective terms and policies. We are not responsible for any third-party services.</p>
+
+                <h3>Feedback</h3>
+                <p>If you provide feedback or suggestions about the App, you grant us the right to use that feedback without any obligation to you.</p>
+
+                <h3>Governing Law (EULA)</h3>
+                <p>This EULA is governed by the same law and jurisdiction outlined in the Terms and Conditions section (laws of Ontario, Canada).</p>
+            </section>
+
+            <!-- REFUND POLICY -->
+            <section id="refund" class="section">
+                <h2>Refund Policy</h2>
+
+                <p>We want you to be satisfied with your experience using PetVerse. This Refund Policy explains how we handle refunds for in-app purchases and subscriptions.</p>
+
+                <h3>Purchases Through Google Play Store</h3>
+                <p>All monetary transactions for PetVerse are processed exclusively by the Google Play Store. PetVerse does not collect or store your payment information. <strong>Google's refund policies apply:</strong></p>
+                <ul>
+                    <li>You can request a refund directly via the Play Store within 48 hours of purchase</li>
+                    <li>After 48 hours, refund requests are handled case-by-case by Google support</li>
+                </ul>
+
+                <h3>Our Refund Policy Terms</h3>
+                <p>Because digital goods are delivered instantly, our general policy is that purchases are final and non-refundable once you have accessed the premium content. However, we will consider refund requests for:</p>
+
+                <h4>1. Accidental Purchase</h4>
+                <p>If you accidentally purchased a feature and have not meaningfully used it, contact Google Play immediately and email us at cozycatapp@gmail.com within 7 days. If we verify it was accidental and unused, we will support your request with Google.</p>
+
+                <h4>2. Technical Issues</h4>
+                <p>If a paid feature is completely unusable due to a fault on our side—and we cannot resolve it within 14 days—we will instruct Google to refund your purchase or refund you directly where possible.</p>
+
+                <h4>3. Unauthorized Purchase</h4>
+                <p>If someone made a purchase on your device without permission, report it to Google Play and email us right away. We will assist in any way we can.</p>
+
+                <h4>4. Dissatisfaction</h4>
+                <p>If you're genuinely dissatisfied—especially soon after purchase—email us within 14 days with details. Though not guaranteed, we may offer a full or partial refund or suggest alternatives.</p>
+
+                <h3>How to Request a Refund</h3>
+                <ol>
+                    <li>Open the Google Play Store's refund process for your purchase (fastest)</li>
+                    <li>If that doesn't work, email <strong>cozycatapp@gmail.com</strong> with:
+                        <ul>
+                            <li>Purchase receipt or order ID</li>
+                            <li>Date of purchase</li>
+                            <li>Reason for your request</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>We will acknowledge your email within 5 business days and respond fully within 30 days.</p>
+
+                <h3>Subscriptions & Cancellations</h3>
+                <ul>
+                    <li>To stop future charges, cancel your subscription anytime in your Google Play account settings</li>
+                    <li>Canceling stops auto-renewal but does not refund the current period</li>
+                    <li>You retain access until the subscription expires</li>
+                    <li>If you cancel early and wish a partial refund for unused time, please contact us</li>
+                </ul>
+
+                <h3>No-Refund Circumstances</h3>
+                <p>We reserve the right to decline refund requests in cases of:</p>
+                <ul>
+                    <li>Suspected fraud or abuse (e.g., repeated purchase/refund patterns)</li>
+                    <li>Consuming most of a service before requesting a refund</li>
+                    <li>Users terminated for policy violations</li>
+                </ul>
+
+                <h3>Statutory Rights</h3>
+                <p>This policy does not affect any rights you have under applicable law. For instance, EU users may have a right to withdraw within 14 days under the Consumer Rights Directive. Please mention any statutory right when contacting us.</p>
+
+                <div class="highlight">
+                    <strong>Our Commitment:</strong> We aim to be fair and reasonable with refunds. Most issues can be resolved by contacting us, and we're happy to help.
+                </div>
+            </section>
+
+            <!-- COOKIES POLICY -->
+            <section id="cookies" class="section">
+                <h2>Cookies Policy</h2>
+
+                <p>This Cookies Policy explains how PetVerse uses "cookies" and similar technologies in our Android app and any related web content.</p>
+
+                <h3>What Are Cookies and Similar Technologies?</h3>
+                <p>In a mobile app context, these include:</p>
+                <ul>
+                    <li><strong>Local Storage or Preferences:</strong> The App saves data on your device (tutorial flags, UI settings) to remember state between sessions</li>
+                    <li><strong>Device Identifiers:</strong> We use system-provided identifiers (e.g., Android Advertising ID) for analytics and functionality</li>
+                    <li><strong>Webview Cookies:</strong> When PetVerse opens web content in an in-app browser, those pages may set standard HTTP cookies</li>
+                </ul>
+
+                <h3>How We Use Cookies / Data Storage</h3>
+                <ul>
+                    <li><strong>Essential Functions:</strong> We store minimal local state to ensure the app works smoothly</li>
+                    <li><strong>Analytics and Performance:</strong> We use Firebase Analytics only if you've opted in (withdraw consent via Settings > Privacy > Share Usage Analytics)</li>
+                    <li><strong>Authentication & Sync:</strong> Cloud Firestore relies on local storage caching for offline support</li>
+                    <li><strong>Preferences & UI Customization:</strong> We remember your theme choice or layout settings between sessions</li>
+                    <li><strong>Web Content:</strong> External websites opened in PetVerse's webview may set their own cookies under their policies</li>
+                </ul>
+
+                <h3>Third-Party Cookies/Technology</h3>
+                <ul>
+                    <li><strong>Firebase Analytics:</strong> Uses Android Advertising ID; only collects data if you opted in</li>
+                    <li><strong>Crashlytics:</strong> May collect device info and optional user ID tags for crash reports (purged on 90-day cycle)</li>
+                    <li><strong>OpenAI:</strong> Does not set any client-side cookies; all processing is server-side</li>
+                </ul>
+
+                <h3>Your Choices and Controls</h3>
+                
+                <h4>To limit or reset device identifiers on Android:</h4>
+                <ol>
+                    <li>Open Settings > Google > Ads</li>
+                    <li>Enable "Opt out of Ads Personalization"</li>
+                    <li>Tap "Reset Advertising ID" to generate a new identifier</li>
+                </ol>
+
+                <h4>To clear webview cookies:</h4>
+                <ol>
+                    <li>Go to Settings > Apps > PetVerse</li>
+                    <li>Choose Storage & cache</li>
+                    <li>Select "Clear storage" or "Clear cache"</li>
+                </ol>
+
+                <p><strong>Do Not Track:</strong> The standard Do Not Track browser setting is not applicable in Android apps. We do not engage in cross-app tracking beyond the aggregated, opt-out-eligible analytics described above.</p>
+
+                <h3>Changes to This Cookies Policy</h3>
+                <p>We will update this policy if we change how we use cookies or similar technologies (for example, adding ad networks). We will notify you in-app for material changes.</p>
+            </section>
+
+            <!-- CONTACT -->
+            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #E8E8E8;">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or concerns about these legal policies, please contact us:</p>
+                <p>
+                    <strong>Email:</strong> cozycatapp@gmail.com<br>
+                    <strong>Developer:</strong> Adam Wunder<br>
+                    <strong>Address:</strong> 1-81 Eagen Drive, Kitchener, ON N2M 5C7, Canada
+                </p>
+                <p>Please include "PetVerse Legal Question" in your subject line for faster response.</p>
+            </div>
+
+            <div class="highlight" style="margin-top: 2rem;">
+                <strong>Thank you for reading PetVerse's legal policies.</strong> We believe in transparency and want you to feel comfortable and informed while using our App. We hope you enjoy PetVerse!
+            </div>
+        </main>
+    </div>
+</body>
+</html>
