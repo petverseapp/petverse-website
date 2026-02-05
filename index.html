@@ -81,7 +81,7 @@
         }
 
         .logo-icon {
-            width: 280px;
+            width: 300px;
             height: 100px;
         }
 
@@ -330,6 +330,182 @@
         .trust-stat-label {
             color: var(--text-soft);
             font-weight: 500;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .how-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .how-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .how-step {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 2rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(45, 95, 126, 0.03) 0%, rgba(78, 205, 196, 0.03) 100%);
+            border-radius: 24px;
+            border: 1px solid rgba(45, 95, 126, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .how-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-hero);
+            transform: scaleY(0);
+            transition: transform 0.4s ease;
+        }
+
+        .how-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(45, 95, 126, 0.15);
+            border-color: var(--primary-light);
+        }
+
+        .how-step:hover::before {
+            transform: scaleY(1);
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-hero);
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(45, 95, 126, 0.25);
+        }
+
+        .step-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .step-title {
+            font-size: 1.75rem;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .step-description {
+            font-size: 1.1rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .step-features {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .step-tag {
+            background: rgba(45, 95, 126, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(45, 95, 126, 0.15);
+        }
+
+        .how-timeline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            background: var(--gradient-warm);
+            border-radius: 24px;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .timeline-milestone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text-soft);
+            font-weight: 500;
+        }
+
+        .timeline-connector {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--success) 100%);
+            margin: 0 1rem;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .timeline-connector::after {
+            content: '→';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--success);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .how-cta {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(45, 95, 126, 0.05) 0%, rgba(78, 205, 196, 0.05) 100%);
+            border-radius: 24px;
+            border: 2px dashed rgba(45, 95, 126, 0.2);
+        }
+
+        .how-cta-text {
+            font-size: 1.2rem;
+            color: var(--text-soft);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .how-cta-text strong {
+            color: var(--dark);
         }
 
         /* Features Section */
@@ -666,7 +842,7 @@
         .pricing-feature::before {
             content: '✓';
             color: var(--success);
-            font-weight: 699;
+            font-weight: 700;
             font-size: 1.25rem;
             flex-shrink: 0;
         }
@@ -816,6 +992,26 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .how-step {
+                grid-template-columns: 70px 1fr;
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+
+            .step-number {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+
+            .step-title {
+                font-size: 1.5rem;
+            }
+
+            .timeline-connector {
+                width: 40px;
+            }
+
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -881,6 +1077,67 @@
             .trust-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .how-step {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.75rem;
+                margin: 0 auto;
+            }
+
+            .step-title {
+                font-size: 1.35rem;
+                text-align: center;
+            }
+
+            .step-description {
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .step-features {
+                justify-content: center;
+            }
+
+            .step-tag {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.9rem;
+            }
+
+            .how-timeline {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 2rem 1.5rem;
+            }
+
+            .timeline-connector {
+                width: 3px;
+                height: 40px;
+                transform: rotate(0);
+            }
+
+            .timeline-connector::after {
+                content: '↓';
+                right: auto;
+                left: 50%;
+                top: auto;
+                bottom: -8px;
+                transform: translateX(-50%);
+            }
+
+            .how-cta {
+                padding: 2rem 1.5rem;
+            }
+
+            .how-cta-text {
+                font-size: 1.05rem;
             }
 
             .section-title {
@@ -961,6 +1218,113 @@
             <div class="trust-stat">
                 <span class="trust-stat-number">0</span>
                 <span class="trust-stat-label">Data Shared Externally</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-container">
+            <div class="section-header">
+                <span class="section-badge">Simple Process</span>
+                <h2 class="section-title">Track Daily, Predict Early</h2>
+                <p class="section-subtitle">
+                    Four simple steps to transform daily pet care into preventive health insights—powered by on-device AI.
+                </p>
+            </div>
+
+            <div class="how-steps">
+                <div class="how-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Create Your Pet's Profile</h3>
+                        <p class="step-description">
+                            Add your pet with breed, age, and any existing health conditions. Our breed intelligence database instantly configures risk analysis for 18+ health categories.
+                        </p>
+                        <div class="step-features">
+                            <span class="step-tag">🐕 Dogs & Cats</span>
+                            <span class="step-tag">🧬 Breed-Specific</span>
+                            <span class="step-tag">📊 Up to 8 pets free</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="how-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Log Daily Observations</h3>
+                        <p class="step-description">
+                            Track 13 key health metrics in seconds: energy level, eating habits, water intake, mobility, breathing, and more. Earn XP with each log and level up your pet!
+                        </p>
+                        <div class="step-features">
+                            <span class="step-tag">⚡ 30-second logging</span>
+                            <span class="step-tag">🎮 XP rewards</span>
+                            <span class="step-tag">📴 Works offline</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="how-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">AI Analyzes Patterns</h3>
+                        <p class="step-description">
+                            Our on-device ML engine processes your logs using 45 features—tracking trends, volatility, and deviations. After 30 logs, predictions activate. At 75+, accuracy peaks.
+                        </p>
+                        <div class="step-features">
+                            <span class="step-tag">🔒 100% private</span>
+                            <span class="step-tag">⚡ <50ms predictions</span>
+                            <span class="step-tag">🧠 Self-tuning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="how-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Get Health Insights</h3>
+                        <p class="step-description">
+                            View personalized risk scores for kidney, heart, joints, respiratory, and 14+ other categories. Export reports for your vet. Share access with family via multi-user permissions.
+                        </p>
+                        <div class="step-features">
+                            <span class="step-tag">📈 18 health categories</span>
+                            <span class="step-tag">📄 PDF/CSV export</span>
+                            <span class="step-tag">👥 Family sharing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="how-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Day 1</div>
+                    <div class="timeline-desc">Create profile → Start logging</div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Day 30</div>
+                    <div class="timeline-desc">ML predictions activate</div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Day 75</div>
+                    <div class="timeline-desc">Optimal accuracy reached</div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-item">
+                    <div class="timeline-milestone">Day 150+</div>
+                    <div class="timeline-desc">Expert-level confidence</div>
+                </div>
+            </div>
+
+            <div class="how-cta">
+                <p class="how-cta-text">
+                    <strong>The sooner you start, the smarter it gets.</strong> Your pet's health history builds their unique AI model—100% private, 100% personalized.
+                </p>
+                <a href="#" class="primary-cta">
+                    Start Tracking Free
+                    <span>→</span>
+                </a>
             </div>
         </div>
     </section>
